@@ -1,6 +1,7 @@
-package org.algo.Level1;
+package org.Hash.lv1;
 
 import java.util.HashMap;
+
 //https://school.programmers.co.kr/learn/courses/30/lessons/118666
 public class CharacterTest {
 
