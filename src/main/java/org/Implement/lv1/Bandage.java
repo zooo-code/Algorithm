@@ -1,7 +1,8 @@
-package org.algo.Level1;
+package org.Implement.lv1;
 //https://school.programmers.co.kr/learn/courses/30/lessons/250137
 
 import java.util.HashMap;
+
 public class Bandage {
 
     public static void main(String[] args) {
