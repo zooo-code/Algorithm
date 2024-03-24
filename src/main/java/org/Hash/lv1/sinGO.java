@@ -1,4 +1,4 @@
-package org.NotGroup.algo.Level1;
+package org.Hash.lv1;
 
 import java.util.Arrays;
 import java.util.HashMap;
