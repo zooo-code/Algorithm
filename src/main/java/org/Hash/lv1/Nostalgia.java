@@ -1,19 +1,19 @@
-package org.NotGroup.algo.Level1;
+package org.Hash.lv1;
 
 import java.util.HashMap;
 
 /**
  * https://school.programmers.co.kr/learn/courses/30/lessons/176963?language=java
  */
-public class First {
+public class Nostalgia {
 
 
     public static void main(String[] args) {
-        First first = new First();
+        Nostalgia nostalgia = new Nostalgia();
         String[] name = {"may", "kein", "kain", "radi"};
         int [] yearning = {5, 10, 1, 3};
         String[][] photo =  {{"may", "kein", "kain", "radi"},{"may", "kein", "brin", "deny"},{"kon", "kain", "may", "coni"}};
-        System.out.println(first.solution(name, yearning, photo));
+        System.out.println(nostalgia.solution(name, yearning, photo));
     }
 
 

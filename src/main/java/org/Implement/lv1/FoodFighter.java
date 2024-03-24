@@ -1,11 +1,12 @@
-package org.NotGroup.algo.Level1;
+package org.Implement.lv1;
 //https://school.programmers.co.kr/learn/courses/30/lessons/134240
-public class Third {
+// 15 분
+public class FoodFighter {
 
 
     public static void main(String[] args) {
         int[] food = {1,3,4,6};
-        String solution = new Third().solution(food);
+        String solution = new FoodFighter().solution(food);
         System.out.println(solution);
     }
 
