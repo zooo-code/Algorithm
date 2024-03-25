@@ -3,6 +3,9 @@ package org.StackQueue.lv2;
 import java.util.LinkedList;
 import java.util.Queue;
 
+// 30 분 고민후 해설 참조
+// 핵심 그냥 작을때 옮기고 다 더하자.
+// https://school.programmers.co.kr/learn/courses/30/lessons/118667?language=java
 public class QueueSumEquals {
 
     public int solution(int[] queue1, int[] queue2) {
