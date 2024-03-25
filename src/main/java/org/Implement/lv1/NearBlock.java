@@ -1,7 +1,7 @@
-package org.NotGroup.algo.Level1;
+package org.Implement.lv1;
 
 //https://school.programmers.co.kr/learn/courses/30/lessons/250125
-//todo equals 스트링 비교
+
 public class NearBlock {
     public static void main(String[] args) {
         String[][] board = {{"blue", "red", "orange", "red"},
