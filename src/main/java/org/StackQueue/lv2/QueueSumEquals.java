@@ -51,7 +51,7 @@ public class QueueSumEquals {
             } else{
                 break;
             }
-            // 이부분이 엣지 케이스이다. 반복을 각 큐만큼 의 길이만큼 보다 더 하고 2배 더하면 안되는 것
+            //반복을 각 큐만큼 의 길이만큼 보다 더 하고 2배 더하면 안되는 것
             if(answer > (queue1.length + queue2.length) * 2)
                 return -1;
         }

@@ -1,10 +1,10 @@
-package org.NotGroup.algo.Level2;
+package org.DFSBFS.lv2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 //https://school.programmers.co.kr/learn/courses/30/lessons/150368?language=java
-
+//30분 고민후 포기
 public class EmoticonDiscountOffer {
 
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class EmoticonDiscountOffer {
         int[] answer;
         list = new ArrayList<>();
         List<int[]> result = new ArrayList<>();
-        com(0, emoticons.length, 0, new int[emoticons.length]);
+        dfs(0, emoticons.length, 0, new int[emoticons.length]);
         // 위의 메서드를 마치면 리스트에 모든 경우의 할인율이 저장된다.
         list.forEach(a -> System.out.println("a = " + Arrays.toString(a)));
 
@@ -65,7 +65,8 @@ public class EmoticonDiscountOffer {
         return answer;
     }
 
-    public void com(int idx, int size, int depth, int[] arr) {
+    // 모든 할인 경우를 만들어서 담는다.
+    public void dfs(int idx, int size, int depth, int[] arr) {
         if (size == depth) {
             int[] temp = new int[arr.length];
             for (int i = 0; i < arr.length; i++) {
@@ -77,7 +78,7 @@ public class EmoticonDiscountOffer {
 
         for (int i = 0; i < 4; i++) {
             arr[idx] = dis[i];
-            com(idx + 1, size, depth + 1, arr);
+            dfs(idx + 1, size, depth + 1, arr);
         }
     }
 }

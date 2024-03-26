@@ -1,4 +1,4 @@
-package org.NotGroup.algo.Level1;
+package org.StackQueue.lv1;
 
 import java.util.Stack;
 //https://school.programmers.co.kr/learn/courses/30/lessons/133502
@@ -28,7 +28,10 @@ public class MakeHamburger {
                         && inStack.get(inStack.size()-1) == 1) {
 
                     answer++; // 값++
-                    inStack.pop(); inStack.pop(); inStack.pop(); inStack.pop(); // 1231 총 4개를 pop()을 활용해 삭제
+                    inStack.pop();
+                    inStack.pop();
+                    inStack.pop();
+                    inStack.pop(); // 1231 총 4개를 pop()을 활용해 삭제
                 }
             }
 
