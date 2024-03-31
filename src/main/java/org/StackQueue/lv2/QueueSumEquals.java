@@ -30,7 +30,7 @@ public class QueueSumEquals {
             return 0;
         }
         System.out.println(sum + " q1Sum " + q1Sum + " q2Sum " + q2Sum);
-
+        // 반복문을 돌면서 이제 합을 찾는다.
         while(true){
 
             if(q1Sum < q2Sum){

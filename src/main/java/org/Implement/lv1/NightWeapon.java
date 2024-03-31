@@ -16,6 +16,14 @@ public class NightWeapon {
     }
     public int solution(int number, int limit, int power) {
         int answer = 0;
+        String test = new String("test");
+
+        String upperCase = test.toUpperCase();
+        System.out.println("upperCase = " + upperCase);
+        char[] a  = upperCase.toCharArray();
+
+
+
         for (int i = 1 ; i <= number ; i++){
             int cnt = 0;
             //num이 16일 경우 약수는 1, 2, 4, 8, 16
