@@ -1,4 +1,4 @@
-package org.NotGroup.algo.Level1;
+package org.Sort.lv1;
 
 import java.util.Arrays;
 
@@ -18,19 +18,20 @@ public class FruitMarket {
 
     public int solution(int k, int m, int[] score) {
         int answer = 0;
-        int[] ints = Arrays.stream(score).sorted().toArray();
-        System.out.println(Arrays.toString(ints));
+        Arrays.sort(score);
+
         int count = 0;
         for (int i = score.length -1 ; i>=0 ; i--){
-            System.out.println(ints[i]);
+
             count++;
             if (count==m){
-                answer += ints[i] * m;
+                answer += score[i] * m;
                 count = 0;
             }
         }
+        int i = score[score.length -1];
 
-
+        System.out.println("i = " + i);
         return answer;
     }
 }
