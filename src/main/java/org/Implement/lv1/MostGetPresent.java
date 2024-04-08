@@ -1,4 +1,4 @@
-package org.NotGroup.algo.Level1;
+package org.Implement.lv1;
 
 import java.util.HashMap;
 //https://school.programmers.co.kr/learn/courses/30/lessons/258712
