@@ -1,6 +1,7 @@
-package org.NotGroup.algo.Level1;
+package org.Implement.lv1;
 
 import java.util.Stack;
+// https://school.programmers.co.kr/learn/courses/30/lessons/64061
 public class PickDoll {
 
     public static void main(String[] args) {
