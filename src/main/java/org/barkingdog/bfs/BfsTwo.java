@@ -5,59 +5,62 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.StringTokenizer;
 
 public class BfsTwo {
 
-    static int[][] map;
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
     static int n;
     static int m;
-    static boolean[][] visited;
-    static int[] dx = { -1, 1, 0, 0 }; //x방향배열-상하
-    static int[] dy = { 0, 0, -1, 1 }; //y방향배열-좌우
 
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        n = Integer.parseInt(st.nextToken());
-        m = Integer.parseInt(st.nextToken());
 
-        map = new int[n][m];
-        for(int i=0; i<n; i++) {
-            String s = br.readLine();
-            for(int j=0; j<m; j++) {
-                map[i][j] = s.charAt(j) - '0';
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        String[] split = br.readLine().split(" ");
+
+        n = Integer.parseInt(split[0]);
+        m = Integer.parseInt(split[1]);
+        int[][] map  =  new int[n][m];
+        for (int i = 0; i < n; i++) {
+            String[] split1 = br.readLine().split("");
+            for (int j = 0; j < split1.length; j++) {
+                map[i][j] = Integer.parseInt(split1[j]);
             }
         }
+        int answerMap = bfs(map);
 
-        visited = new boolean[n][m];
-        visited[0][0] = true;
-        bfs(0, 0);
-        System.out.println(map[n-1][m-1]);
+        System.out.print(answerMap);
+
     }
 
-    public static void bfs(int x, int y) {
-        Queue<int[]> q = new LinkedList<>();
-        q.add(new int[] {x,y});
 
-        while(!q.isEmpty()) {
-            int now[] = q.poll();
-            int nowX = now[0];
-            int nowY = now[1];
+    public static int bfs(int[][] maps){
+        int[] start = {0,0};
+        Queue<int[]> queue = new LinkedList<>();
+        queue.offer(start);
 
-            for(int i=0; i<4; i++) {
-                int nextX = nowX + dx[i];
-                int nextY = nowY + dy[i];
+        while(!queue.isEmpty()){
+            int[] cur = queue.poll();
 
-                if (nextX < 0 || nextY < 0 || nextX >= n || nextY >= m)
-                    continue;
-                if (visited[nextX][nextY] || map[nextX][nextY] == 0)
-                    continue;
+            int x = cur[0];
+            int y = cur[1];
 
-                q.add(new int[] {nextX, nextY});
-                map[nextX][nextY] = map[nowX][nowY] + 1;
-                visited[nextX][nextY] = true;
+            for(int i = 0; i < 4; i++){
+
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+                if(0<= nx && nx < n && 0<= ny && ny < m && maps[nx][ny]!=0){
+
+                    if(maps[nx][ny]==1){
+                        maps[nx][ny] = maps[x][y] +1;
+                        queue.offer(new int[]{nx, ny});
+                    }
+
+                }
             }
+
         }
+        return maps[n-1][m-1];
     }
 }
