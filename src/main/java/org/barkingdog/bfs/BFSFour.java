@@ -37,6 +37,20 @@ public class BFSFour {
             }
         }
 
+        while (!q1.isEmpty()) {
+            int[] pos = q1.poll();
+
+            int x = pos[0];
+            int y = pos[1];
+            for (int i = 0; i < 4; i++) {
+                int nx = x + dx[i];
+                int ny = y + dy[i];
+                if (nx < 0 || ny < 0 || nx >= R || ny >= C) {
+                    continue;
+                }
+
+            }
+        }
 
 
 
